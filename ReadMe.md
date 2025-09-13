@@ -23,7 +23,7 @@ This application simulates a real interview by asking a candidate a series of qu
 
 1.  **Clone the repository:**
     ```bash
-    git clone [your-repo-url]
+    git clone https://github.com/johankaibutsu/ai-interviewer-excel.git
     cd ai-interviewer-excel
     ```
 2.  **Install dependencies:**

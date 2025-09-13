@@ -1,0 +1,107 @@
+[
+  {
+    "question": "Let's start with a conceptual question. What is the fundamental difference between the `VLOOKUP` and `INDEX/MATCH` combination in Excel?",
+    "topic": "Formulas",
+    "difficulty": "Easy",
+    "rubric": "Evaluates understanding of flexibility. VLOOKUP is simpler but less flexible (only looks right, static column index). INDEX/MATCH is more robust, can look left, and doesn't break when columns are inserted/deleted.",
+    "hint": "Think about which direction each function can look up data in a table. Does one of them handle inserted columns better than the other?"
+  },
+  {
+    "question": "You have a list of sales figures in cells A2:A100. How would you write a formula to find the second-highest sale amount?",
+    "topic": "Formulas",
+    "difficulty": "Easy",
+    "rubric": "The correct answer is `=LARGE(A2:A100, 2)`. Award partial credit for overly complex solutions involving MAX and IF.",
+    "hint": "Excel has a specific function for finding the 'k-th' largest value in a range. It's not the `MAX` function."
+  },
+  {
+    "question": "What is the purpose of the `IFERROR` function, and can you provide a simple example of its use?",
+    "topic": "Formulas",
+    "difficulty": "Easy",
+    "rubric": "Answer must state that IFERROR traps and handles errors. A good example would be wrapping a VLOOKUP: `=IFERROR(VLOOKUP(A1, B:C, 2, FALSE), \"Not Found\")`.",
+    "hint": "Consider what happens when a `VLOOKUP` doesn't find a value. How can you show a clean message instead of `#N/A`?"
+  },
+  {
+    "question": "Practical Scenario: Column D (from D2 downwards) contains messy customer names (e.g., '  john SMITH  '). What single formula would you use in column E to clean these names into a proper case format (e.g., 'John Smith')?",
+    "topic": "Data Cleaning",
+    "difficulty": "Medium",
+    "rubric": "The ideal answer combines two functions: `=PROPER(TRIM(D2))`. Award partial credit for using just `TRIM` or `PROPER`.",
+    "hint": "You'll likely need to combine two different text functions: one to handle the extra spaces and another to fix the capitalization."
+  },
+  {
+    "question": "You have a date '2023-10-26' in cell F1. What formula would you use to find the last day of that month?",
+    "topic": "Date & Time",
+    "difficulty": "Medium",
+    "rubric": "The most efficient answer is `=EOMONTH(F1, 0)`. Also acceptable are formulas involving `DATE`, `YEAR`, and `MONTH`.",
+    "hint": "Look for a specific date function in Excel that deals with the 'End Of Month'."
+  },
+  {
+    "question": "What is the primary purpose of a Pivot Table in Excel?",
+    "topic": "Pivot Tables",
+    "difficulty": "Easy",
+    "rubric": "A good answer mentions that Pivot Tables are used to summarize, group, count, and analyze large datasets dynamically.",
+    "hint": "How would you quickly summarize a million rows of sales data without writing a single formula?"
+  },
+  {
+    "question": "Scenario: Column A has first names, Column B has last names. What formula would you use in Column C to combine them into 'Lastname, Firstname'?",
+    "topic": "Text Manipulation",
+    "difficulty": "Easy",
+    "rubric": "Best answer uses CONCAT or the ampersand operator: `=B2 & \", \" & A2`.",
+    "hint": "You can join text strings together using a special character, the `&` symbol."
+  },
+  {
+    "question": "Why might you choose `XLOOKUP` over `VLOOKUP`?",
+    "topic": "Formulas",
+    "difficulty": "Medium",
+    "rubric": "Key points: `XLOOKUP` is simpler, defaults to exact match, can search right-to-left, and has built-in `if_not_found` handling.",
+    "hint": "Think about the limitations of `VLOOKUP`. Which of those does `XLOOKUP` solve natively?"
+  },
+  {
+    "question": "What is the purpose of the dollar sign `$` in an Excel formula?",
+    "topic": "Best Practices",
+    "difficulty": "Medium",
+    "rubric": "The dollar sign locks a row or column reference (absolute reference), preventing it from changing when the formula is dragged or copied.",
+    "hint": "What happens to the cell references when you drag a formula down a column? How do you stop that from happening?"
+  },
+  {
+    "question": "How would you calculate the number of working days between a start date (cell A2) and an end date (cell B2)?",
+    "topic": "Date & Time",
+    "difficulty": "Medium",
+    "rubric": "The correct function is `=NETWORKDAYS(A2, B2)`.",
+    "hint": "Excel has specific functions for business-related date calculations. Search for a function related to 'work' or 'network'."
+  },
+  {
+    "question": "What is 'Data Validation' in Excel used for?",
+    "topic": "Data Integrity",
+    "difficulty": "Medium",
+    "rubric": "It's used to restrict data entry in a cell, for example, by creating a dropdown list.",
+    "hint": "How do you prevent a user from entering text into a cell that should only contain a date?"
+  },
+  {
+    "question": "How can you use the 'Slicer' feature with a Pivot Table?",
+    "topic": "Pivot Tables",
+    "difficulty": "Medium",
+    "rubric": "Slicers are user-friendly visual filters that allow for quick and interactive filtering of PivotTable data.",
+    "hint": "Think of a more visual and user-friendly way to filter a report, besides using the dropdown arrows."
+  },
+  {
+    "question": "What is Power Query and what key problem does it solve?",
+    "topic": "Advanced Tools",
+    "difficulty": "Hard",
+    "rubric": "Power Query is an ETL tool that automates the process of connecting to, cleaning, and transforming data from various sources in a repeatable way.",
+    "hint": "Imagine you have to clean the same messy report every single month. How could you automate all the cleaning steps?"
+  },
+  {
+    "question": "How would you debug a complex formula that is returning an error?",
+    "topic": "Best Practices",
+    "difficulty": "Medium",
+    "rubric": "The 'Evaluate Formula' tool in the Formulas tab is the primary way to step through each part of a formula's calculation.",
+    "hint": "There's a built-in tool in Excel that lets you see a formula calculate one step at a time."
+  },
+  {
+    "question": "How is `SUMIF` different from `SUMIFS`?",
+    "topic": "Formulas",
+    "difficulty": "Easy",
+    "rubric": "The key difference is the number of criteria. `SUMIF` allows for one condition, while `SUMIFS` allows for multiple conditions.",
+    "hint": "What if you need to sum sales for a specific product AND a specific region? Which function would you use?"
+  }
+]

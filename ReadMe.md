@@ -41,3 +41,7 @@ This application simulates a real interview by asking a candidate a series of qu
     ```
 
 ## Working Demo
+
+
+https://github.com/user-attachments/assets/6e61e025-ec69-4fd6-a338-276c3f2a3592
+

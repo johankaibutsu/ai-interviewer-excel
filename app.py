@@ -113,7 +113,7 @@ if 'stage' not in st.session_state:
     st.session_state.results = []
     st.session_state.retry_attempt = False
 
-    INTERVIEW_LENGTH = 3
+    INTERVIEW_LENGTH = 8
     full_question_list = load_questions()
 
     if len(full_question_list) > INTERVIEW_LENGTH:
@@ -178,6 +178,12 @@ if prompt := st.chat_input("Your answer"):
             st.session_state.messages.append({"role": "assistant", "content": first_question})
             with st.chat_message("assistant"):
                 st.markdown(first_question)
+
+        else:
+            response = "Please type 'start' to begin the interview."
+            st.session_state.messages.append({"role": "assistant", "content": response})
+            with st.chat_message("assistant"):
+                st.markdown(response)
 
     elif st.session_state.stage == 'interviewing':
         current_q_data = st.session_state.interview_questions[st.session_state.q_index]
